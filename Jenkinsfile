@@ -1,5 +1,5 @@
 stage('Get a ZAP Pod') {
-    node('zap') {
+    node {
         stage('Scan Web Application') {
             dir('/zap') {
                 def retVal = sh returnStatus: true, script: '/zap/zap-baseline.py -r baseline.html -t https://fpt.vn'
